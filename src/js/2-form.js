@@ -15,13 +15,15 @@ function readFormData(form) {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (form.email.textContent || form.message.textContent === "") {
-        alert("Please fill out the form!")
-    };
+    
     if (form.email.textContent && form.message.textContent !== "")
     {
         localStorage.clear();
-    form.reset();}
+        form.reset()
+    }
+    else if (form.email.textContent || form.message.textContent === "") {
+        alert("Please fill out the form!")
+    };
     
    
 })
