@@ -16,12 +16,12 @@ function readFormData(form) {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     
-    if (form.email.textContent && form.message.textContent !== "")
+    if (form.email.value && form.message.value != "")
     {
         localStorage.clear();
         form.reset()
     }
-    else if (form.email.textContent || form.message.textContent === "") {
+    else if (form.email.value || form.message.value == "") {
         alert("Please fill out the form!")
     };
     
