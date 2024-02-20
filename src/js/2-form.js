@@ -31,7 +31,7 @@ if (rawData) {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     
-    if (form.email.value.trim() && form.message.value.trim() !== "")
+    if (form.email.value.trim() !=="" && form.message.value.trim() !== "")
     {
         console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
         localStorage.removeItem("feedback-form-state");
